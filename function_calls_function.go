@@ -1,4 +1,4 @@
-package main
+package function_calls_function
 
 var a string
 

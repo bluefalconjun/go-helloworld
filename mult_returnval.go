@@ -1,5 +1,5 @@
 // mult_returnval.go
-package main
+package mult_returnval
 
 import (
 	"fmt"

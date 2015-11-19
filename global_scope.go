@@ -1,4 +1,4 @@
-package main
+package global_scope
 
 var a = "G"
 

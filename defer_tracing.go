@@ -1,4 +1,4 @@
-package main
+package defer_tracing
 
 import "fmt"
 
