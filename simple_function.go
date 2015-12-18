@@ -1,8 +1,8 @@
-package simple_function
+package main
 
 import "fmt"
 
-func main() {
+func simple_function() {
 	fmt.Printf("Multiply 2 * 5 * 6 = %d\n", MultiPly3Nums(2, 5, 6))
 	// var i1 int = MultiPly3Nums(2, 5, 6)
 	// fmt.Printf("MultiPly 2 * 5 * 6 = %d\n", i1)

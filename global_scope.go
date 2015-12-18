@@ -1,8 +1,8 @@
-package global_scope
+package main
 
-var a = "G"
+var glocal_scopea = "G"
 
-func main() {
+func glocal_scope() {
 	n()
 	m()
 	n()
@@ -13,6 +13,6 @@ func n() {
 }
 
 func m() {
-	a = "0"
+	glocal_scopea = "0"
 	print(a)
 }

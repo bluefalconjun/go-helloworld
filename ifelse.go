@@ -1,8 +1,8 @@
-package ifelse
+package main
 
 import "fmt"
 
-func main() {
+func ifelse() {
 	var i bool
 	i = false
 	k()

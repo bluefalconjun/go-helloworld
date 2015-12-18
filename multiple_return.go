@@ -1,11 +1,11 @@
-package multiple_return
+package main
 
 import "fmt"
 
 var num int = 10
 var numx2, numx3 int
 
-func main() {
+func multiple_return() {
 	numx2, numx3 = getX2AndX3(num)
 	PrintValues()
 	numx2, numx3 = getX2AndX3_2(num)

@@ -1,4 +1,4 @@
-package factory_func
+package main
 
 //package main
 
@@ -18,7 +18,7 @@ func MakeAddSuffix(suffix string) func(string) string {
 	}
 }
 
-func main() {
+func facory_func() {
 	addBmp := MakeAddSuffix(".bmp")
 	addJpeg := MakeAddSuffix(".jpeg")
 	where1 := func() {

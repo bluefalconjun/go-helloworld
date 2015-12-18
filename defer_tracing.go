@@ -1,4 +1,4 @@
-package defer_tracing
+package main
 
 import "fmt"
 
@@ -22,6 +22,6 @@ func b() {
 	a()
 }
 
-func main() {
+func defer_tracing() {
 	b()
 }
