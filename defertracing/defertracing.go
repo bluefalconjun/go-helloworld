@@ -22,6 +22,6 @@ func b() {
 	a()
 }
 
-func defer_tracing() {
+func main() {
 	b()
 }
