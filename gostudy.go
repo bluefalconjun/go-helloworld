@@ -29,4 +29,5 @@ func main() {
 	slice.SlicesRange()
 	fmt.Printf("Go,world\n")
 	maps.Maps()
+	maps.MapsTest()
 }

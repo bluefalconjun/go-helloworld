@@ -1,6 +1,9 @@
 package maps
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Vertex struct {
 	Lat, Long float64
@@ -33,4 +36,25 @@ func Maps() {
 	fmt.Println(bellvertexis, ok)
 	bellvertex, is := m["Bell Labs"]
 	fmt.Println(bellvertex, is)
+}
+
+func WordCount(s string) map[string]int {
+	fmt.Println(s)
+	var words []string = strings.Fields(s)
+	retm := make(map[string]int)
+
+	for i := 0; i < len(words); i++ {
+		if _, ok := retm[words[i]]; ok {
+			retm[words[i]] = retm[words[i]] + 1
+			continue
+		}
+		retm[words[i]] = 1
+
+	}
+
+	return retm
+}
+
+func MapsTest() {
+	fmt.Println(WordCount("I ate a donut. Then I ate another donut."))
 }
