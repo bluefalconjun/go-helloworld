@@ -14,3 +14,8 @@ gostudy.go
  - sliceslice
  - structpointer
  - switchsample
+
+
+see this pic with slice create by coordinate
+
+![pic](https://github.com/bluefalconjun/gostudy/blob/master/goslice_show.png)
