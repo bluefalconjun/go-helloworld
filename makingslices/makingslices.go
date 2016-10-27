@@ -23,7 +23,7 @@ func Makingslices() {
 //cap: capacity of the array[which array slice in]
 //0<=len(x)<=cap(x)
 
-func printSlice(s string, x []int) {
+func printSlice(s string, x []int){
 	fmt.Printf("%s len=%d cap=%d %v\n",
 		s, len(x), cap(x), x)
 }
