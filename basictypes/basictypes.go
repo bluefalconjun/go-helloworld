@@ -16,8 +16,8 @@ var (
 )
 
 func Basictypes() {
-    //%T means print the type of var, %v means value of var?
-    // see https://golang.org/pkg/fmt/ for details
+	//%T means print the type of var, %v means value of var?
+	// see https://golang.org/pkg/fmt/ for details
 	const f = "%T(%v)\n"
 	const v = 5
 	const w int = 5
