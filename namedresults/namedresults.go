@@ -1,4 +1,4 @@
-package main
+package namedresults
 
 import
 (
@@ -11,6 +11,6 @@ func split(sum int)(x, y int){
     return
 }
 
-func main(){
+func Namedresults(){
     fmt.Println(split(17))
 }

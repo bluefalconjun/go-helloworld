@@ -1,4 +1,4 @@
-package main
+package structpointer
 
 import "fmt"
 
@@ -7,7 +7,7 @@ type Vertex struct {
 	Y int
 }
 
-func main() {
+func Structpointer() {
 	v := Vertex{1, 2}
 	p := &v
 	p.X = 1e9

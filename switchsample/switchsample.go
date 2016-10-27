@@ -1,11 +1,11 @@
-package main
+package switchsample
 
 import (
 	"fmt"
 	"runtime"
 )
 
-func main() {
+func Switchsample() {
 	fmt.Print("Go runs on ")
 	switch os := runtime.GOOS; os {
 	case "darwin":

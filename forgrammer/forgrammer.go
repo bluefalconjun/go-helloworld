@@ -1,8 +1,8 @@
-package main
+package forgrammer
 
 import "fmt"
 
-func main() {
+func Forgrammer() {
 	sum := 1
 
     //for_init/for_check/for_loop 1st/3rd can be ignored in code.

@@ -1,8 +1,8 @@
-package main
+package slice
 
 import "fmt"
 
-func main() {
+func Slice() {
 	s := []int{2, 3, 5, 7, 11, 13}
 	fmt.Println("s ==", s)
 

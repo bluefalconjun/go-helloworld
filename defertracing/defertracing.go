@@ -1,4 +1,4 @@
-package main
+package defertracing
 
 import "fmt"
 
@@ -22,6 +22,6 @@ func b() {
 	a()
 }
 
-func main() {
+func Defertracing() {
 	b()
 }

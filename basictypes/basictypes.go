@@ -1,4 +1,4 @@
-package main
+package basictypes
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ var (
 	z      complex128 = cmplx.Sqrt(-5 + 12i)
 )
 
-func main() {
+func Basictypes() {
     //%T means print the type of var, %v means value of var?
     // see https://golang.org/pkg/fmt/ for details
 	const f = "%T(%v)\n"
