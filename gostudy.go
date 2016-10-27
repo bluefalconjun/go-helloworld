@@ -10,6 +10,7 @@ import (
 	"github.com/bluefalconjun/gostudy/makingslices"
 
 	"github.com/bluefalconjun/gostudy/arraytype"
+	"github.com/bluefalconjun/gostudy/function"
 	"github.com/bluefalconjun/gostudy/maps"
 	"github.com/bluefalconjun/gostudy/slice"
 )
@@ -30,4 +31,5 @@ func main() {
 	fmt.Printf("Go,world\n")
 	maps.Maps()
 	maps.MapsTest()
+	functions.Funclosures()
 }
