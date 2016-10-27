@@ -10,6 +10,7 @@ import (
 	"github.com/bluefalconjun/gostudy/makingslices"
 
 	"github.com/bluefalconjun/gostudy/arraytype"
+	"github.com/bluefalconjun/gostudy/maps"
 	"github.com/bluefalconjun/gostudy/slice"
 )
 
@@ -25,6 +26,7 @@ func main() {
 
 	arraytype.ArrayType()
 	slice.SlicesAppend()
-	fmt.Printf("Go,world\n")
 	slice.SlicesRange()
+	fmt.Printf("Go,world\n")
+	maps.Maps()
 }

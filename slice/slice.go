@@ -74,9 +74,13 @@ func printSlice(s string, x []byte) {
 
 func SlicesRange() {
 	var pow = []int{1, 2, 4, 8, 16, 32, 64, 128, 256, 512}
+	var array [10]int
 	var pownew []byte = make([]byte, 0, 20)
+	array = [...]int{1, 2, 4, 8, 16, 32, 64, 128, 256, 512}
+	pow = append(pow, 1)
 	pownew = append(pownew, 1)
 	pownew = append(pownew, 2)
+	//note array must be define as [num]type or [...]tytpe={}; otherwise it is slice
 	//note i,v will be the temp copy value from the array pow. so if you want to change value in array pow.
 	//you need to use array idx like : pow[i] ... !!!
 	//range loop array only count to len(array)
@@ -85,6 +89,9 @@ func SlicesRange() {
 	}
 
 	for i, v := range pownew {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+	for i, v := range array {
 		fmt.Printf("2**%d = %d\n", i, v)
 	}
 }
