@@ -3,10 +3,14 @@
 -----
 go language study from [go tour](https://tour.go-zh.org)
 
-main.go
+gostudy.go
 
-basictypes
-defertracing
-forgrammer
-namedresults
-switchsample
+ - basictypes
+ - defertracing
+ - forgrammer
+ - makingslices
+ - namedresults
+ - slice
+ - sliceslice
+ - structpointer
+ - switchsample
