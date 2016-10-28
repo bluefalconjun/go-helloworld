@@ -11,6 +11,7 @@ import (
 
 	"github.com/bluefalconjun/gostudy/arraytype"
 	"github.com/bluefalconjun/gostudy/function"
+	"github.com/bluefalconjun/gostudy/interfaces"
 	"github.com/bluefalconjun/gostudy/maps"
 	"github.com/bluefalconjun/gostudy/slice"
 )
@@ -32,4 +33,5 @@ func main() {
 	maps.Maps()
 	maps.MapsTest()
 	functions.Funclosures()
+	interfaces.Interfaces()
 }
