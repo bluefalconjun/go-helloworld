@@ -16,6 +16,8 @@ gostudy.go
  - switchsample
 
 
+see the doc about how to effective go code: [here](https://github.com/bluefalconjun/gostudy/blob/master/effective.go.md)
+
 see this pic with slice create by coordinate
 
 ![pic](https://github.com/bluefalconjun/gostudy/blob/master/goslice_show.png)
