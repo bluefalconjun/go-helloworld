@@ -10,9 +10,11 @@ import (
 	"github.com/bluefalconjun/gostudy/makingslices"
 
 	"github.com/bluefalconjun/gostudy/arraytype"
+	"github.com/bluefalconjun/gostudy/channel"
 	"github.com/bluefalconjun/gostudy/function"
 	"github.com/bluefalconjun/gostudy/interfaces"
 	"github.com/bluefalconjun/gostudy/maps"
+	"github.com/bluefalconjun/gostudy/runtime"
 	"github.com/bluefalconjun/gostudy/slice"
 )
 
@@ -34,4 +36,8 @@ func main() {
 	maps.MapsTest()
 	functions.Funclosures()
 	interfaces.Interfaces()
+	interfaces.Checkelement()
+	interfaces.StringerDemo()
+	runtime.RuntimeDemo()
+	channel.Channeldemo()
 }
