@@ -33,12 +33,14 @@ func getfolder() []string {
     cmdret, cmderr = cmd.Output()
     fmt.Println(buf)
     
-    cmd = exec.Command("find . -name", GITFOLDER)
+    cmd = exec.Command("find",".", "-name", GITFOLDER)
     cmdret, cmderr = cmd.Output()
-    fmt.Println(cmdret, cmderr)
+    buf = string(cmdret[:])
+    fmt.Println(buf)
 
+    folders = strings.Fields(buf)
+    fmt.Println(folders)
 
-    
     
     return folders
 }
