@@ -4,18 +4,18 @@ package main
 import (
 	"fmt"
 
-	"github.com/bluefalconjun/gostudy/basictypes"
-	"github.com/bluefalconjun/gostudy/defertracing"
-	"github.com/bluefalconjun/gostudy/forgrammer"
-	"github.com/bluefalconjun/gostudy/makingslices"
+	"github.com/bluefalconjun/gostudy/study/basictypes"
+	"github.com/bluefalconjun/gostudy/study/defertracing"
+	"github.com/bluefalconjun/gostudy/study/forgrammer"
+	"github.com/bluefalconjun/gostudy/study/makingslices"
 
-	"github.com/bluefalconjun/gostudy/arraytype"
-	"github.com/bluefalconjun/gostudy/channel"
-	"github.com/bluefalconjun/gostudy/function"
-	"github.com/bluefalconjun/gostudy/interfaces"
-	"github.com/bluefalconjun/gostudy/maps"
-	"github.com/bluefalconjun/gostudy/runtime"
-	"github.com/bluefalconjun/gostudy/slice"
+	"github.com/bluefalconjun/gostudy/study/arraytype"
+	"github.com/bluefalconjun/gostudy/study/channel"
+	"github.com/bluefalconjun/gostudy/study/function"
+	"github.com/bluefalconjun/gostudy/study/interfaces"
+	"github.com/bluefalconjun/gostudy/study/maps"
+	"github.com/bluefalconjun/gostudy/study/runtime"
+	"github.com/bluefalconjun/gostudy/study/slice"
 )
 
 var USESAMPLE = false
