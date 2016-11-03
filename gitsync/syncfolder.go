@@ -4,23 +4,41 @@ import (
     "fmt"
     "strings"
     "os/exec"
+    "os"
 )
 
 //
-var curpwd []byte
+const KEYFOLDER string = "workspace"
+const GITFOLDER string = ".git"
+
+var cmdret []byte
 var folders []string
 
 
 func getfolder() []string {
+    //get current pwd    
     cmd := exec.Command("pwd")
+    cmdret, cmderr := cmd.Output()
+
+    buf := string(cmdret[:])
+    i := strings.Index(buf, KEYFOLDER)
+    buf = buf[:i+len(KEYFOLDER)]
+    fmt.Println(buf)
     
-    curpwd, _ := cmd.Output()
+    //check folder list
+    cmderr = os.Chdir(buf)
+    fmt.Println(cmderr)
     
-    buf := string(curpwd[:])
+    cmd = exec.Command("pwd")
+    cmdret, cmderr = cmd.Output()
+    fmt.Println(buf)
     
-    folders := strings.Split(buf, "/")
+    cmd = exec.Command("find . -name", GITFOLDER)
+    cmdret, cmderr = cmd.Output()
+    fmt.Println(cmdret, cmderr)
+
+
     
-    fmt.Println(folders)
     
     return folders
 }
