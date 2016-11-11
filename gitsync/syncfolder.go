@@ -23,15 +23,18 @@ func getfolder() []string {
     buf := string(cmdret[:])
     i := strings.Index(buf, KEYFOLDER)
     buf = buf[:i+len(KEYFOLDER)]
-    fmt.Println(buf)
+    fmt.Println("curpwd:" + buf)
     
     //check folder list
     cmderr = os.Chdir(buf)
-    fmt.Println(cmderr)
+    if (cmderr!=nil) {
+        fmt.Println(cmderr)
+    }
     
     cmd = exec.Command("pwd")
     cmdret, cmderr = cmd.Output()
-    fmt.Println(buf)
+    buf = string(cmdret[:])
+    fmt.Println("keypwd:"+buf)
     
     cmd = exec.Command("find",".", "-name", GITFOLDER)
     cmdret, cmderr = cmd.Output()

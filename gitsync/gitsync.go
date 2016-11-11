@@ -11,7 +11,7 @@ func main(){
     
     fmt.Println("Sync Start")
     
-    getfolder()
+    execsync(getfolder())
     
     fmt.Println("Sync End")
 }
