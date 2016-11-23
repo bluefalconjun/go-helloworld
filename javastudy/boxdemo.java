@@ -9,6 +9,8 @@ class Box
     double height;
     double depth;
 } class boxdemo
+
+
 {
     // Your program begins with a call to main().
   public
