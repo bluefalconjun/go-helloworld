@@ -8,6 +8,19 @@ class Box
     double width;
     double height;
     double depth;
+
+    // This is the constructor for Box.
+    Box(double w，double h，double d) {
+    width = w;
+    height = h;
+    depth = d;
+
+    // display volume of a box
+    void volume() {
+        System.out.print("Volume is ");
+        System.out.println(width * height * depth);
+    }
+
 } class boxdemo
 {
     // Your program begins with a call to main().
@@ -27,5 +40,8 @@ class Box
 	// compute volume of box
 	vol = mybox.width * mybox.height * mybox.depth;
 	System.out.println("Volume is " + vol);
+
+    mybox_reference.volume();
+
     }
 }
