@@ -22,6 +22,8 @@ class Box
     }
 
 } class boxdemo
+
+
 {
     // Your program begins with a call to main().
   public
