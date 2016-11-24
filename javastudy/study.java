@@ -16,8 +16,7 @@ class study
     // Your program begins with a call to main().
     // static keywords makes your class can be used without using NEW*
   public
-    static void main(String args[])
-    {
+    static void main(String args[]) {
 	System.out.println("This is a simple Java program.");
 
 	int num;   // this declares a variable called num
