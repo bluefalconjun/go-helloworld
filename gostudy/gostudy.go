@@ -4,18 +4,16 @@ package main
 import (
 	"fmt"
 
-	"github.com/bluefalconjun/gostudy/study/basictypes"
-	"github.com/bluefalconjun/gostudy/study/defertracing"
-	"github.com/bluefalconjun/gostudy/study/forgrammer"
-	"github.com/bluefalconjun/gostudy/study/makingslices"
-
-	"github.com/bluefalconjun/gostudy/study/arraytype"
-	"github.com/bluefalconjun/gostudy/study/channel"
-	"github.com/bluefalconjun/gostudy/study/function"
-	"github.com/bluefalconjun/gostudy/study/interfaces"
-	"github.com/bluefalconjun/gostudy/study/maps"
-	"github.com/bluefalconjun/gostudy/study/runtime"
-	"github.com/bluefalconjun/gostudy/study/slice"
+	"github.com/bluefalconjun/lang-study/gostudy/arraytype"
+	"github.com/bluefalconjun/lang-study/gostudy/basictypes"
+	"github.com/bluefalconjun/lang-study/gostudy/channel"
+	"github.com/bluefalconjun/lang-study/gostudy/defertracing"
+	"github.com/bluefalconjun/lang-study/gostudy/forgrammer"
+	"github.com/bluefalconjun/lang-study/gostudy/interfaces"
+	"github.com/bluefalconjun/lang-study/gostudy/makingslices"
+	"github.com/bluefalconjun/lang-study/gostudy/maps"
+	"github.com/bluefalconjun/lang-study/gostudy/runtime"
+	"github.com/bluefalconjun/lang-study/gostudy/slice"
 )
 
 var USESAMPLE = false
@@ -34,7 +32,7 @@ func main() {
 	fmt.Printf("Go,world\n")
 	maps.Maps()
 	maps.MapsTest()
-	functions.Funclosures()
+	//functions.Funclosures()
 	interfaces.Interfaces()
 	interfaces.Checkelement()
 	interfaces.StringerDemo()
