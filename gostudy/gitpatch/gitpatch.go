@@ -74,13 +74,31 @@ func main() {
 		}
 	}
 
-	//copysinglefile("/workspace/download/github.com/bluefalconjun/lang-study/gostudy/gitpatch ")
+	checkerr = tarfiles(patchfoldername)
+	if checkerr != nil {
+		return
+	}
+
+	//remove folder at last
+	cmdret, cmderr = exec.Command("rm", "-fr", patchfoldername).Output()
+	if cmderr != nil {
+		fmt.Println("rm " + patchfoldername + " failed")
+		return
+	}
 
 	return
 }
 
-func spreatedifffile() {
-	return
+func tarfiles(foldername string) error {
+	cmderr = nil
+
+	cmdret, cmderr = exec.Command("tar", "czvf", foldername+".tgz", foldername).Output()
+	if cmderr != nil {
+		fmt.Println("tar " + foldername + " failed")
+		return cmderr
+	}
+	fmt.Println("tar " + foldername + ".tgz success")
+	return cmderr
 }
 
 func copysinglefile(singlefile string) error {
@@ -101,7 +119,6 @@ func copysinglefile(singlefile string) error {
 
 		cmdret, cmderr = exec.Command("mkdir", "-p", patchfoldername+"/"+singlefilepath).Output()
 		if cmderr != nil {
-			fmt.Println("Can not mkdir:")
 			fmt.Println("mkdir -p " + singlefilepath + " failed")
 			return cmderr
 		}
@@ -129,7 +146,6 @@ func preparefolder(name string) error {
 	cmdret, cmderr = exec.Command("mkdir", "-p", name).Output()
 
 	if cmderr != nil {
-		fmt.Println("Wrong result:")
 		fmt.Println("mkdir -p " + name + " failed")
 		return cmderr
 	}
@@ -144,8 +160,7 @@ func checkgitlog(buf *string) error {
 	*buf = string(cmdret[:])
 
 	if cmderr != nil {
-		fmt.Println("Wrong result:")
-		fmt.Println("git diff " + os.Args[2] + " " + os.Args[3])
+		fmt.Println("git diff "+os.Args[2]+" "+os.Args[3], "failed")
 		return cmderr
 	}
 	fmt.Println(*buf)
