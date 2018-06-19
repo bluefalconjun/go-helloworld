@@ -121,7 +121,7 @@ func copysinglefile(singlefile string) error {
 		fmt.Println("cp -f " + singlefilename + " failed")
 		return cmderr
 	}
-	fmt.Println("cp" + singlefilename + " success")
+	fmt.Println("cp " + singlefilename + " success")
 	return cmderr
 }
 
@@ -139,7 +139,8 @@ func preparefolder(name string) error {
 
 func checkgitlog(buf *string) error {
 
-	cmdret, cmderr = exec.Command("git", "diff", os.Args[2], os.Args[3], "--stat").Output()
+	//git diff $commit1 $commit2 and need stat-name-width more for no ... .
+	cmdret, cmderr = exec.Command("git", "diff", os.Args[2], os.Args[3], "--stat-width=512").Output()
 	*buf = string(cmdret[:])
 
 	if cmderr != nil {
@@ -156,6 +157,7 @@ func help() {
 	fmt.Println("Wrong Args! Check Usage:")
 	fmt.Println("gitpatch . 808369a 49ffbc1:")
 	fmt.Println("gitpatch <$curpath> <$commit1> <$commit2>:")
+	fmt.Println("gitpatch only works on rootdir of git repository, commitid should more than 6 bytes.")
 	fmt.Println()
 	return
 }
