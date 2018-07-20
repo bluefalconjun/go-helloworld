@@ -129,13 +129,13 @@ func copysinglefile(singlefile string) error {
 	}
 
 	if len(singlefilepath) != 0 {
-		cmdret, cmderr = exec.Command("cp -d", singlefilepath+"/"+singlefilename, patchfoldername+"/"+singlefilepath+"/").Output()
+		cmdret, cmderr = exec.Command("cp", "-d", singlefilepath+"/"+singlefilename, patchfoldername+"/"+singlefilepath+"/").Output()
 	} else {
-		cmdret, cmderr = exec.Command("cp -d", singlefilename, patchfoldername+"/").Output()
+		cmdret, cmderr = exec.Command("cp", "-d", singlefilename, patchfoldername+"/").Output()
 	}
 
 	if cmderr != nil {
-		fmt.Println("cp -f " + singlefilename + " failed")
+		fmt.Println("cp " + singlefilename + " failed")
 		return cmderr
 	}
 	fmt.Println("cp " + singlefilename + " success")
