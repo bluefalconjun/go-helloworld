@@ -19,7 +19,7 @@ $>rm -fr gostduy_new
 
 this program do previews works
 by cmd input:
-$>./gitpatch . 808369a 49ffbc1
+$>./gitpatch  808369a 49ffbc1
 */
 
 package main
@@ -38,13 +38,18 @@ var cmdret []byte
 
 func main() {
 	curargs := os.Args
-	if len(curargs) != 4 {
+	if len(curargs) < 2 {
 		help()
 		return
 	}
 
 	//patch folder name only contains first 5 bytes in commit id.
-	patchfoldername = os.Args[2][:5] + "_" + os.Args[3][:5]
+	if len(curargs) == 2 {
+		patchfoldername = os.Args[1][:5]
+	} else if len(curargs) == 3 {
+		patchfoldername = os.Args[1][:5] + "_" + os.Args[2][:5]
+	}
+
 	fmt.Println("create folder:", patchfoldername)
 
 	checkerr := checkenv()
@@ -156,11 +161,16 @@ func preparefolder(name string) error {
 func checkgitlog(buf *string) error {
 
 	//git diff $commit1 $commit2 and need stat-name-width more for no ... .
-	cmdret, cmderr = exec.Command("git", "diff", os.Args[2], os.Args[3], "--stat-width=512").Output()
+	if len(os.Args) == 3 {
+		cmdret, cmderr = exec.Command("git", "diff", os.Args[1], os.Args[2], "--stat-width=512").Output()
+	} else if len(os.Args) == 2 {
+		cmdret, cmderr = exec.Command("git", "show", os.Args[1], "--stat-width=512").Output()
+	}
+
 	*buf = string(cmdret[:])
 
 	if cmderr != nil {
-		fmt.Println("git diff "+os.Args[2]+" "+os.Args[3], "failed")
+		fmt.Println("git diff/show "+os.Args[1]+" "+os.Args[2], "failed")
 		return cmderr
 	}
 	fmt.Println(*buf)
@@ -170,8 +180,9 @@ func checkgitlog(buf *string) error {
 
 func help() {
 	fmt.Println("Wrong Args! Check Usage:")
-	fmt.Println("gitpatch . 808369a 49ffbc1:")
-	fmt.Println("gitpatch <$curpath> <$commit1> <$commit2>:")
+	fmt.Println("gitpatch 808369a 49ffbc1")
+	fmt.Println("gitpatch <$commit1> <$commit2>:")
+	fmt.Println("gitpatch <$commit1> ")
 	fmt.Println("gitpatch only works on rootdir of git repository, commitid should more than 6 bytes.")
 	fmt.Println()
 	return
