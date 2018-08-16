@@ -43,6 +43,7 @@ func main() {
 		return
 	}
 
+	fmt.Println("Warning! Due to checkout correct files, this program will do hard reset in your git resp")
 	//patch folder name only contains first 5 bytes in commit id.
 	if len(curargs) == 2 {
 		patchfoldername = os.Args[1][:5]
@@ -160,6 +161,13 @@ func preparefolder(name string) error {
 
 func checkgitlog(buf *string) error {
 
+	//should reset to commit 1 with clean code to avoid later change
+	cmdret, cmderr = exec.Command("git", "reset", os.Args[1], "--hard").Output()
+	if cmderr != nil {
+		fmt.Println("git reset "+os.Args[1], "failed")
+		return cmderr
+	}
+
 	//git diff $commit1 $commit2 and need stat-name-width more for no ... .
 	if len(os.Args) == 3 {
 		cmdret, cmderr = exec.Command("git", "diff", os.Args[1], os.Args[2], "--stat-width=512").Output()
@@ -184,6 +192,7 @@ func help() {
 	fmt.Println("gitpatch <$commit1> <$commit2>:")
 	fmt.Println("gitpatch <$commit1> ")
 	fmt.Println("gitpatch only works on rootdir of git repository, commitid should more than 6 bytes.")
+	fmt.Println("$commit1 should be later than $commit2")
 	fmt.Println()
 	return
 }
