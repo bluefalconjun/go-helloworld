@@ -1,3 +1,7 @@
+/*
+use this for authorize from a web server without broswer but only http mesg
+*/
+
 package main
 
 import (
