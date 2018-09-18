@@ -86,7 +86,7 @@ func main() {
 	}
 
 	//remove folder at last
-	cmdret, cmderr = exec.Command("rm", "-fr", patchfoldername).Output()
+	//cmdret, cmderr = exec.Command("rm", "-fr", patchfoldername).Output()
 	if cmderr != nil {
 		fmt.Println("rm " + patchfoldername + " failed")
 		return
