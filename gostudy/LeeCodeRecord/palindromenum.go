@@ -1,4 +1,4 @@
-package leecode
+package palindromenum
 
 import (
 	"fmt"
