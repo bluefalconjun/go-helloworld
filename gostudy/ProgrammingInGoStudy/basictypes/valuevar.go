@@ -36,7 +36,7 @@ uintptr	=unsigned int pointer as uint32/uint64
 use big package to handle unlimited values(based on memory on platform)
 
 big.Int //integer
-big.Rat //有理数
+big.Rat //有睆数
 */
 
 //func main() {

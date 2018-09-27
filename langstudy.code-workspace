@@ -7,5 +7,7 @@
 			"path": "Z:\\workspace\\download\\go"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.eol": "\n"
+	}
 }
