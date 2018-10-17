@@ -4,6 +4,8 @@ try to restudy the lang grammar from begining.
 
 
 
+-----
+egg study from [eggjs tour](https://eggjs.org/zh-cn/intro/quickstart.html)
 
 
 -----
