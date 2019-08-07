@@ -31,7 +31,8 @@ func main() {
 	slice.SlicesRange()
 	fmt.Printf("Go,world\n")
 	maps.Maps()
-	maps.MapsTest()
+	aps.MapsTest()
+
 	//functions.Funclosures()
 	interfaces.Interfaces()
 	interfaces.Checkelement()
