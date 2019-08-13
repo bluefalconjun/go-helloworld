@@ -22,6 +22,6 @@ package defangingipaddr
 import "strings"
 
 func DefangIPaddr(address string) string {
-    ret := strings.ReplaceAll(address, ".", "[.]")
-    return ret
+	ret := strings.ReplaceAll(address, ".", "[.]")
+	return ret
 }
