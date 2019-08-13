@@ -24,18 +24,19 @@ void init_chain(singlechain *in, int size){
     }
 }
 
-void print_chain(singlechain *in, int size){
+void print_chain(singlechain *in){
     singlechain *cur = in;
     printf("list is: \n");
-    for (int i=0; i<size; i++){
-        if (cur != NULL ) printf(" %d ", cur->value);
-        if (cur->next != NULL ) cur = cur->next;
+    while(cur->next != NULL){
+        printf(" %d ", cur->value);
+        cur = cur->next;
     }
+    printf(" %d ", cur->value); // last one is not in loop
     printf("\n");
 }
 
-void reverse_chain(singlechain *in, singlechain *out){
-    if(in->next == NULL) out = in;
+void reverse_chain(singlechain *in, singlechain **out){
+    if(in->next == NULL) *out = in;
 
     singlechain *prev, *cur, *next;
     prev = cur = next = NULL;
@@ -48,20 +49,19 @@ void reverse_chain(singlechain *in, singlechain *out){
         cur=next;
     }
     cur->next = prev;   //last one is not in loop.
-    //out = cur;
-    memcpy(out, cur, sizeof(singlechain));
+    *out = cur;
+    //memcpy(out, cur, sizeof(singlechain)); //if use struct but not struct pointer in func call. should cpy.
 }
 
 int main(int argc, char** argv){
     singlechain* in = NULL;
-    singlechain out;
+    singlechain* out;
 
     in = malloc(CHAIN_SIZE*sizeof(singlechain));
-    printf("%p\n", in);
     init_chain(in, CHAIN_SIZE);
-    print_chain(in, CHAIN_SIZE);
+    print_chain(in);
     reverse_chain(in, &out);
-    print_chain(&out, CHAIN_SIZE);
+    print_chain(out);
 
     free(in);
 
