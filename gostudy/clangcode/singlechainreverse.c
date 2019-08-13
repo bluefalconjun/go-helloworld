@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 #define CHAIN_SIZE  5
@@ -33,8 +34,8 @@ void print_chain(singlechain *in, int size){
     printf("\n");
 }
 
-void reverse_chain(singlechain *in, singlechain **out){
-    if(in->next == NULL) *out = in;
+void reverse_chain(singlechain *in, singlechain *out){
+    if(in->next == NULL) out = in;
 
     singlechain *prev, *cur, *next;
     prev = cur = next = NULL;
@@ -47,19 +48,20 @@ void reverse_chain(singlechain *in, singlechain **out){
         cur=next;
     }
     cur->next = prev;   //last one is not in loop.
-    *out = cur;
+    //out = cur;
+    memcpy(out, cur, sizeof(singlechain));
 }
 
 int main(int argc, char** argv){
     singlechain* in = NULL;
-    singlechain* out = NULL;
+    singlechain out;
 
     in = malloc(CHAIN_SIZE*sizeof(singlechain));
     printf("%p\n", in);
     init_chain(in, CHAIN_SIZE);
     print_chain(in, CHAIN_SIZE);
     reverse_chain(in, &out);
-    print_chain(out, CHAIN_SIZE);
+    print_chain(&out, CHAIN_SIZE);
 
     free(in);
 
