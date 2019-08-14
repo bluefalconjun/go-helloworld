@@ -35,10 +35,11 @@ void print_chain(singlechain *in){
     printf("\n");
 }
 
-void reverse_chain(singlechain *in, singlechain **out){
+int reverse_chain(singlechain *in, singlechain **out){
     if(in->next == NULL) *out = in;
 
     singlechain *prev, *cur, *next;
+    int i = 0;
     prev = cur = next = NULL;
 
     cur = in;
