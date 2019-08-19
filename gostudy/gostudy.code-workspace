@@ -6,5 +6,12 @@
 		{
 			"path": "Z:\\workspace\\download\\github.com\\bluefalconjun\\lang-study\\clangstudy"
 		}
-	]
+	],
+	"settings": {
+		"files.associations": {
+			"*.def": "makefile",
+			"*.txt": "bat",
+			"singlechainreverse.h": "c"
+		}
+	}
 }

@@ -1,14 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-
-#define CHAIN_SIZE  5
-
-typedef struct __singlechain__ {
-    int value;
-    struct __singlechain__ * next;
-} singlechain;
+#include "singlechainreverse.h"
 
 
 void init_chain(singlechain *in, int size){
@@ -54,17 +44,22 @@ int reverse_chain(singlechain *in, singlechain **out){
     //memcpy(out, cur, sizeof(singlechain)); //if use struct but not struct pointer in func call. should cpy.
 }
 
-int main(int argc, char** argv){
+int test_singlechainreverse(void){
     singlechain* in = NULL;
     singlechain* out;
 
-    in = malloc(CHAIN_SIZE*sizeof(singlechain));
+    printf("test_singlechainreverse start: \n");
+
+    in = calloc(CHAIN_SIZE,sizeof(singlechain));
+
     init_chain(in, CHAIN_SIZE);
     print_chain(in);
     reverse_chain(in, &out);
     print_chain(out);
 
     free(in);
+
+    printf("test_singlechainreverse end. \n");
 
     return 0;
 }

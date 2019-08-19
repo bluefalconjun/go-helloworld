@@ -1,3 +1,3 @@
 gitsync/gitsync
 .clang-format
-
+*.cache/*

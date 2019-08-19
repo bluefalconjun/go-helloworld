@@ -102,7 +102,7 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_clangtest_OBJECTS = singlechainreverse.$(OBJEXT)
+am_clangtest_OBJECTS = singlechainreverse.$(OBJEXT) main.$(OBJEXT)
 clangtest_OBJECTS = $(am_clangtest_OBJECTS)
 clangtest_DEPENDENCIES =
 AM_V_P = $(am__v_P_@AM_V@)
@@ -271,7 +271,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign  #设定automake的选项
-clangtest_SOURCES = singlechainreverse.c  #源文件以及头文件
+clangtest_SOURCES = singlechainreverse.c main.c  #源文件以及头文件
 clangtest_LDADD = #数学库，可简写为LDADD=-lm
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
@@ -379,6 +379,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/singlechainreverse.Po@am__quote@
 
 .c.o:
