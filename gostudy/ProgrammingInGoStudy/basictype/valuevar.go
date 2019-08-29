@@ -1,6 +1,6 @@
 //package main
 
-package basictypes
+package basictype
 
 import (
 	"fmt"
@@ -41,22 +41,18 @@ big.Rat //有睆数
 
 //func main() {
 func countPi() {
-	places := handleCommandLine(1000)
+	places := 1000
 	scalePi := fmt.Sprint(Pi(places))
 	fmt.Printf("3.%s\n", scalePi[1:])
 }
 
+//Pi returns Pi
 func Pi(place int) *big.Int {
-	gigits := big.NewInt(int64(places))
+	gigits := big.NewInt(int64(place))
 	unity := big.NewInt(0)
 	ten := big.NewInt(10)
 	exponent := big.NewInt(0)
-	unity.Exp(ten, exponent.Add(digits, ten), nil)
+	unity.Exp(ten, exponent.Add(gigits, ten), nil)
 	pi := big.NewInt(4)
-	left := arccot(big.NewInt(5).unity)
-	left.Mul(left, bigNewInt(4))
-	right := arccot(big.NewInt(239), unity)
-	left.Sub(left, right)
-	pi.Mul(pi, left)
-	return pi.Div(pi, bigNewInt(0).Exp(ten, ten, nil))
+	return pi.Div(pi, big.NewInt(0).Exp(ten, ten, nil))
 }

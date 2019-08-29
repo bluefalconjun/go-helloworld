@@ -1,4 +1,4 @@
-package stringstest
+package string
 
 /*
 String operate grammer : desc/result
@@ -12,3 +12,8 @@ len([]rune(s))			charactor num of string s ?
 []rune(s)				convert srting s to Unicode
 
 */
+
+//StringTest is the test
+func StringTest(){
+
+}

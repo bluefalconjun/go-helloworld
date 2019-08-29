@@ -4,16 +4,21 @@ package main
 import (
 	"fmt"
 
-	"github.com/bluefalconjun/lang-study/gostudy/arraytype"
-	"github.com/bluefalconjun/lang-study/gostudy/basictypes"
-	"github.com/bluefalconjun/lang-study/gostudy/channel"
-	"github.com/bluefalconjun/lang-study/gostudy/defertracing"
-	"github.com/bluefalconjun/lang-study/gostudy/forgrammer"
-	"github.com/bluefalconjun/lang-study/gostudy/interfaces"
-	"github.com/bluefalconjun/lang-study/gostudy/makingslices"
-	"github.com/bluefalconjun/lang-study/gostudy/maps"
-	"github.com/bluefalconjun/lang-study/gostudy/runtime"
-	"github.com/bluefalconjun/lang-study/gostudy/slice"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/arraytype"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/basictype"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/channel"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/defertracing"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/forgrammer"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/function"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/interfaces"
+	//"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/makingslices"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/maps"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/namedresult"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/runtime"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/slice"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/string"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/structpointer"
+	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/switchsample"
 )
 
 var USESAMPLE = false
@@ -21,17 +26,20 @@ var USESAMPLE = false
 func main() {
 	fmt.Printf("Hello,world\n")
 
-	basictypes.Basictypes()
+	basictype.Basictypes()
 	defertracing.Defertracing()
 	forgrammer.Forgrammer()
-	makingslices.Makingslices()
+	//makingslices.Makingslices()
+	function.Funclosures()
+	string.StringTest()
 
 	arraytype.ArrayType()
 	slice.SlicesAppend()
 	slice.SlicesRange()
 	fmt.Printf("Go,world\n")
 	maps.Maps()
-	aps.MapsTest()
+	namedresult.Namedresult()
+	structpointer.Structpointer()
 
 	//functions.Funclosures()
 	interfaces.Interfaces()
@@ -39,4 +47,5 @@ func main() {
 	interfaces.StringerDemo()
 	runtime.RuntimeDemo()
 	channel.Channeldemo()
+	switchsample.Switchsample()
 }

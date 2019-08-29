@@ -49,25 +49,25 @@ func printBoard(s [][]string) {
 
 func SlicesAppend() {
 	var a []byte
-	printSlice("a", a)
+	printSlice1("a", a)
 
 	// append works on nil slices.
 	a = append(a, 0)
-	printSlice("a", a)
+	printSlice1("a", a)
 
 	// the slice grows as needed.
 	a = append(a, 1)
-	printSlice("a", a)
+	printSlice1("a", a)
 
 	// we can add more than one element at a time.
 	//in this case. cap(a) is not enough to hold 2,3,4. so new array has beened arranged for it.
 	//append method in low implement is different when array type is different. !!!
 	//try to change var a[]byte to a[]int and test. !!!
 	a = append(a, 2, 3)
-	printSlice("a", a)
+	printSlice1("a", a)
 }
 
-func printSlice(s string, x []byte) {
+func printSlice1(s string, x []byte) {
 	fmt.Printf("%s len=%d cap=%d %v\n",
 		s, len(x), cap(x), x)
 }

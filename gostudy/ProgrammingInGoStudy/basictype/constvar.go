@@ -1,4 +1,4 @@
-package basictypes
+package basictype
 
 /*
 const declare
@@ -16,13 +16,13 @@ when use fast var declare $id := $value use ":="
 const limit = 512
 
 //const type uint16
-const top uinit16 = 1421
+const top uint16 = 1421
 
 //var with judge type=int
-start := -19
+var start = -19
 
 //var with define type=int64
-end := int64(9876543210)
+var end = int64(9876543210)
 
 //var type=int value=0
 var i int
@@ -31,13 +31,13 @@ var i int
 var debug = false
 
 //var with judge type=bool
-checkresult := true
+var checkresult = true
 
 //var with judge type=float64
-setpSize := 1.5
+var setpSize = 1.5
 
 //var with judge type=string
-acronym := "FOSS"
+var acronym = "FOSS"
 
 const (
 	Cyan = 0
@@ -53,13 +53,13 @@ const (
 	Yellow1		//2
 )
 
-//another use of itoa
+//another use of iota
 type BitFlag int
 
 const (
-	Active BitFlag = 1<<itoa  //1<<0=1
+	Active BitFlag = 1 << iota  //1<<0=1
 	Send					  //1<<1=2
 	Receive					  //1<<2=4
 )
 
-flag := Active | Send
+var flag = Active | Send
