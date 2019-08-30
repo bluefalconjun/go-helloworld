@@ -21,7 +21,8 @@ import (
 	"github.com/bluefalconjun/lang-study/gostudy/ProgrammingInGoStudy/switchsample"
 )
 
-var USESAMPLE = false
+
+
 
 func main() {
 	fmt.Printf("Hello,world\n")
