@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy/CMakeFiles /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(CMAKE_COMMAND) -E cmake_progress_start /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy/CMakeFiles /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy/singlechainrev/CMakeFiles/progress.marks
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f CMakeFiles/Makefile2 singlechainrev/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f CMakeFiles/Makefile2 singlechainrev/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f CMakeFiles/Makefile2 singlechainrev/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f CMakeFiles/Makefile2 singlechainrev/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named ctest
+# Convenience name for target.
+singlechainrev/CMakeFiles/singlechainrev.dir/rule:
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f CMakeFiles/Makefile2 singlechainrev/CMakeFiles/singlechainrev.dir/rule
+.PHONY : singlechainrev/CMakeFiles/singlechainrev.dir/rule
 
-# Build rule for target.
-ctest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ctest
-.PHONY : ctest
+# Convenience name for target.
+singlechainrev: singlechainrev/CMakeFiles/singlechainrev.dir/rule
 
-# fast build rule for target.
-ctest/fast:
-	$(MAKE) -f CMakeFiles/ctest.dir/build.make CMakeFiles/ctest.dir/build
-.PHONY : ctest/fast
-
-#=============================================================================
-# Target rules for targets named singlechainrev
-
-# Build rule for target.
-singlechainrev: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 singlechainrev
 .PHONY : singlechainrev
 
 # fast build rule for target.
 singlechainrev/fast:
-	$(MAKE) -f singlechainrev/CMakeFiles/singlechainrev.dir/build.make singlechainrev/CMakeFiles/singlechainrev.dir/build
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f singlechainrev/CMakeFiles/singlechainrev.dir/build.make singlechainrev/CMakeFiles/singlechainrev.dir/build
 .PHONY : singlechainrev/fast
 
-main.o: main.c.o
+singlechainreverse.o: singlechainreverse.c.o
 
-.PHONY : main.o
+.PHONY : singlechainreverse.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/ctest.dir/build.make CMakeFiles/ctest.dir/main.c.o
-.PHONY : main.c.o
+singlechainreverse.c.o:
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f singlechainrev/CMakeFiles/singlechainrev.dir/build.make singlechainrev/CMakeFiles/singlechainrev.dir/singlechainreverse.c.o
+.PHONY : singlechainreverse.c.o
 
-main.i: main.c.i
+singlechainreverse.i: singlechainreverse.c.i
 
-.PHONY : main.i
+.PHONY : singlechainreverse.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/ctest.dir/build.make CMakeFiles/ctest.dir/main.c.i
-.PHONY : main.c.i
+singlechainreverse.c.i:
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f singlechainrev/CMakeFiles/singlechainrev.dir/build.make singlechainrev/CMakeFiles/singlechainrev.dir/singlechainreverse.c.i
+.PHONY : singlechainreverse.c.i
 
-main.s: main.c.s
+singlechainreverse.s: singlechainreverse.c.s
 
-.PHONY : main.s
+.PHONY : singlechainreverse.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/ctest.dir/build.make CMakeFiles/ctest.dir/main.c.s
-.PHONY : main.c.s
+singlechainreverse.c.s:
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(MAKE) -f singlechainrev/CMakeFiles/singlechainrev.dir/build.make singlechainrev/CMakeFiles/singlechainrev.dir/singlechainreverse.c.s
+.PHONY : singlechainreverse.c.s
 
 # Help Target
 help:
@@ -170,12 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... ctest"
-	@echo "... edit_cache"
 	@echo "... singlechainrev"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... edit_cache"
+	@echo "... singlechainreverse.o"
+	@echo "... singlechainreverse.i"
+	@echo "... singlechainreverse.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/falcon/go/src/github.com/bluefalconjun/lang-study/clangstudy && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

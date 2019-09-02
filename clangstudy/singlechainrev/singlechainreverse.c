@@ -37,7 +37,7 @@ int reverse_chain(singlechain *in, singlechain **out){
         next = cur->next;
         cur->next = prev;
         prev = cur;
-        cur=next;
+        cur = next;
     }
     cur->next = prev;   //last one is not in loop.
     *out = cur;
