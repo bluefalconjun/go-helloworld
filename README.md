@@ -19,15 +19,6 @@ tools/gitsync.go
 
 study/gostudy.go
 
- - basictypes
- - defertracing
- - forgrammer
- - makingslices
- - namedresults
- - slice
- - sliceslice
- - structpointer
- - switchsample
  - ...
 
  - see the doc about how to effective go code: [here](https://github.com/bluefalconjun/gostudy/blob/master/gostudy/effective.go.md)
