@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+/*
+https://studygolang.gitbook.io/learn-go-with-tests/
+以上为Gowithtest所有的测试参考网站.
+*/
+
 const spanish = "Spanish"
 const french = "French"
 const englishHelloPrefix = "Hello, "

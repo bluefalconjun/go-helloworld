@@ -27,7 +27,7 @@ func Interfaces() {
 
 type MyFloat float64
 
-//this is a methiod
+//this is a method
 //"A method is a function with an implicit first argument, called a receiver."
 //MyFloat is the receiver, Abs is the func name.
 //method is bind to receiver
